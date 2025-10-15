@@ -28,7 +28,16 @@ nav a {
   text-decoration: unset;
   text-align: center;
   padding: 8px 20px;
-  border-radius: 30px;
+  border-radius: 15px;
+}
+
+nav a:first-child {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+nav a:last-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 nav a:hover {

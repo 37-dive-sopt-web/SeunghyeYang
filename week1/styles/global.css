@@ -9,6 +9,7 @@ body {
   background-color: #fff1c7;
   height: 100%;
   box-sizing: border-box;
+  overscroll-behavior: none;
 }
 
 main {
@@ -31,6 +32,12 @@ main {
   gap: 3rem;
   overflow-y: auto;
   flex: 1;
+}
+
+#gallery,
+#skill,
+#card {
+  scroll-margin-top: 30vh;
 }
 
 section h3 {
