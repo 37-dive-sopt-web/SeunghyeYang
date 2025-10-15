@@ -1,0 +1,56 @@
+.profile2 {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.hero {
+  margin-top: 20px;
+  background-color: #fde293;
+  padding: 2rem;
+  border-radius: 20px;
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hero-grid {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+}
+.hero-text h3 {
+  margin: 0;
+}
+.hero-text p {
+  margin: 0;
+  color: #fff;
+}
+.button1 {
+  all: unset;
+  background-color: #f9ab00;
+  color: #fff;
+  width: 50px;
+  height: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  font-size: 13px;
+}
+.button2 {
+  all: unset;
+  border: 1px solid #f9ab00;
+  background-color: #fff;
+  color: #f9ab00;
+  width: 50px;
+  height: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  font-size: 13px;
+}

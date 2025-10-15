@@ -1,0 +1,19 @@
+.skill {
+  background-color: #fff1c7;
+}
+.tag-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 100px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  border: 1px solid #d9d9d9;
+}
