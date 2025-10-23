@@ -1,0 +1,15 @@
+/*헤더*/
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #fde293;
+  align-items: center;
+  padding: 30px;
+  margin: 0;
+  width: 100%;
+}
+.header-text {
+  color: #fff;
+  font-size: 13px;
+}
