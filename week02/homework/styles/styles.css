@@ -2,14 +2,196 @@
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   background-color: #fde293;
   align-items: center;
   padding: 30px;
-  margin: 0;
-  width: 100%;
+}
+header p {
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
 }
 .header-text {
   color: #fff;
+}
+
+/*검색 필터*/
+.search-container {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px 20px;
+}
+#search-filter input,
+#search-filter select {
+  border: 1px solid #dedede;
+  background-color: white;
+  border-radius: 8px;
   font-size: 13px;
+  padding: 8px 5px;
+  outline: none;
+  min-width: 0;
+}
+.input-container {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  align-items: center;
+  margin: 15px 0;
+}
+.input-container p {
+  font-weight: bold;
+  text-align: left;
+}
+.filter-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.filter-container3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+#search-filter button {
+  all: unset;
+  background-color: #f9ab00;
+  color: white;
+  width: 100%;
+  padding: 8px 0;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 13px;
+}
+.button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+#search-filter img {
+  width: 20px;
+  height: 20px;
+}
+
+/*웹파트 목록*/
+.list-container {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px 20px;
+}
+#web-list button {
+  all: unset;
+  background-color: #f9ab00;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 13px;
+}
+.list-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.list-button {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/*멤버 리스트 테이블*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th {
+  background-color: #fde293;
+  padding: 10px 0;
+}
+tr {
+  border: 1px solid #dedede;
+  border-width: 1px 0 1px 0;
+}
+td {
+  padding: 10px 0;
+  text-align: center;
+}
+#web-list td a {
+  all: unset;
+  color: #f9ab00;
+}
+#web-list td a:hover {
+  cursor: pointer;
+}
+
+/*모달*/
+#modal[hidden] {
+  display: none;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.modal-panel {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 35rem;
+  max-width: 90vw;
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.modal-close {
+  all: unset;
+  font-size: 18px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.modal-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.modal-title h3 {
+  margin-bottom: 12px;
+}
+
+.modal-form {
+  display: grid;
+  gap: 13px;
+}
+.modal-form label {
+  display: grid;
+  gap: 3px;
+}
+.modal-form input,
+.modal-form select {
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  padding: 10px 10px;
+}
+.modal-option {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 3px;
+}
+.modal-submit {
+  margin-left: auto;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  background: #f9ab00;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 6px;
 }
