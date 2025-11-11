@@ -8,9 +8,9 @@ const App = () => {
   const [tab, setTab] = useState("game");
 
   return (
-    <div className="min-h-screen bg-[#FFFDE1] py-6 flex items-center flex-col gap-9">
+    <div className="min-h-dvh  bg-[#FFFDE1] py-6 flex items-center flex-col gap-9">
       <Header tab={tab} onChangeTab={setTab} />
-      <main className="w-full flex justify-center">
+      <main className="flex-1 w-full flex justify-center items-stretch">
         {tab === "game" ? <GamePage /> : <RankPage />}
       </main>
     </div>

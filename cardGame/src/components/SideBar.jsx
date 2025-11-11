@@ -10,7 +10,7 @@ export default function SideBar({
   history,
 }) {
   return (
-    <aside className="bg-[#FFEC85] rounded-2xl p-5 h-fit sticky top-6">
+    <aside className="bg-[#FFEC85] rounded-2xl p-5 h-full sticky top-6">
       <div className="mb-5">
         <select
           className="bg-[#FFFDE1] w-full rounded-2xl py-2 px-2 font-semibold opacity-70"
@@ -30,20 +30,29 @@ export default function SideBar({
       </div>
 
       <p className="text-[#FFB200] font-bold text-xl mb-2">안내 메시지</p>
-      <div className="bg-[#FFFDE1] rounded-[10px] py-4 px-3 mb-4 text-sm text-gray-700">
+      <div
+        className="bg-[#FFFDE1] rounded-[10px] py-7 px-3 mb-4
+       text-[#FFB200] text-center"
+      >
         {message}
       </div>
 
       <p className="text-[#FFB200] font-bold text-xl mb-2">최근 히스토리</p>
       {history.length === 0 ? (
-        <p className="text-[#FFB200] text-center text-sm opacity-70">
+        <p className="text-[#FFB200] text-center text-sm opacity-80 mt-[30px]">
           아직 뒤집은 카드가 없어요
         </p>
       ) : (
-        <ul className="space-y-1 max-h-48 overflow-auto pr-1">
-          {history.map((h, i) => (
-            <li key={i} className="text-sm">
-              {h.a},{h.b} → {h.ok ? "성공" : "실패"}
+        <ul className="max-h-[220px] overflow-hidden">
+          {history.map((his, i) => (
+            <li
+              key={i}
+              className="text-[15px] flex justify-between items-center px-4 py-2 rounded-2xl mb-2 bg-[#FFFDE1] font-semibold"
+            >
+              <span className={his.ok ? "text-[#FFDA2C]" : "text-[#E41A1D]"}>
+                {his.a},{his.b}
+              </span>
+              <span className="text-[#444]">{his.ok ? "성공" : "실패"}</span>
             </li>
           ))}
         </ul>

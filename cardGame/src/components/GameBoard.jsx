@@ -13,13 +13,13 @@ export default function GameBoard({
       display: "grid",
       gridTemplateColumns: `repeat(${cols}, 100px)`,
       gridAutoRows: "100px",
-      gap: "50px",
+      gap: "30px",
       justifyContent: "center",
     }),
     [cols]
   );
 
-  // 같은 그리드 사용할 때는 useMemo 사용으로 최적화
+  // 같은 그리드 사용할 때는 useMemo 사용으로 최적화...
 
   return (
     <div style={gridStyle}>

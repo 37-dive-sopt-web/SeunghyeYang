@@ -7,7 +7,7 @@ export default function GameCard({ card, flipped, matched, onFlip }) {
       onClick={() => onFlip(card)}
       disabled={flipped || matched}
       className={[
-        "w-35 h-35 rounded-xl grid place-items-center text-2xl font-bold transition-transform",
+        "w-30 h-30 rounded-xl grid place-items-center text-2xl font-bold transition-transform",
         matched
           ? "bg-[#ffcc15] text-black"
           : flipped
