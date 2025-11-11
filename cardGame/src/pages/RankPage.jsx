@@ -68,7 +68,7 @@ export default function RankPage() {
                 formatted.map((r) => (
                   <tr
                     key={`${r.rank}-${r.when}`}
-                    className="odd:bg-[#FFFDE1] text-center"
+                    className="bg-[#FFFDE1] text-center"
                   >
                     <td className="py-2 px-3">{r.rank}</td>
                     <td className="py-2 px-3">Level {r.level}</td>
