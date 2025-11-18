@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
 import InputBox from "../../components/InputBox";
-import { Button } from "../../components/Button";
+import Button from "../../components/Button";
 import * as styles from "./login.css";
 import { useNavigate } from "react-router-dom";
 import { login } from "../../apis/auth";
