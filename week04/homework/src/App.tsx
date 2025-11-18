@@ -1,24 +1,23 @@
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 
-import MyPage from "./pages/MyPage";
-import Login from "./pages/Login";
-import Users from "./pages/Users";
-import SignUp from "./pages/SignUp";
+import Login from "./pages/login";
+import MyPage from "./pages/mypage";
+import Users from "./pages/users";
+import SignUp from "./pages/signup";
 
-// 라우터 설정
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Login />,
   },
   {
-    path: "/signup",
-    element: <SignUp />,
-  },
-  {
     path: "/mypage",
     element: <MyPage />,
+  },
+  {
+    path: "/signup",
+    element: <SignUp />,
   },
   {
     path: "/users",

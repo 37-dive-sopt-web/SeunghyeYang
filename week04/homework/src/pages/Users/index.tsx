@@ -3,7 +3,7 @@ import React from "react";
 const Users = () => {
   return (
     <div>
-      <p>회원 조회 페이지</p>
+      <h1>회원 페이지</h1>
     </div>
   );
 };
