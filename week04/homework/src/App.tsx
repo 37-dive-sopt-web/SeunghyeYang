@@ -4,6 +4,7 @@ import Login from "./pages/login";
 import MyPage from "./pages/mypage";
 import Users from "./pages/users";
 import SignUp from "./pages/signup";
+import Members from "./pages/mypage/Members";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/mypage",
     element: <MyPage />,
+  },
+  {
+    path: "/mypage/members",
+    element: <Members />,
   },
   {
     path: "/signup",
