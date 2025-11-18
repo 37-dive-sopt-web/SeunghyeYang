@@ -5,9 +5,9 @@ import { useState } from "react";
 import type { FormEvent } from "react";
 import { signup } from "../../apis/users";
 
-import UsernameStep from "../mypage/UsernameStep";
-import PasswordStep from "../mypage/PasswordStep";
-import ProfileStep from "../mypage/ProfileStep";
+import UsernameStep from "./UsernameStep";
+import PasswordStep from "./PasswordStep";
+import ProfileStep from "./ProfileStep";
 
 type Step = 1 | 2 | 3;
 
