@@ -13,6 +13,7 @@ const Header = ({ name, activeTab, onOpenWithdrawModal }: HeaderProps) => {
   const handleLogout = () => {
     localStorage.removeItem("userId");
     navigate("/");
+    alert("로그아웃되었습니다.");
   };
 
   return (

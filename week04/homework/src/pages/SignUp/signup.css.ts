@@ -56,3 +56,9 @@ export const textButton = style({
   color: "#F8D25E",
   cursor: "pointer",
 });
+
+export const errorMessage = style({
+  color: "#e11d48",
+  fontSize: "13px",
+  marginTop: "4px",
+});

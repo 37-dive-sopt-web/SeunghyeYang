@@ -38,7 +38,7 @@ const Login = () => {
       <form className={styles.container} onSubmit={handleSubmit}>
         {/* 로그인 타이틀 */}
         <p className={styles.title}>로그인</p>
-        {/* // 아이디 입력 */}
+        {/* 아이디 입력 */}
         <InputBox
           label="아이디"
           value={username}
