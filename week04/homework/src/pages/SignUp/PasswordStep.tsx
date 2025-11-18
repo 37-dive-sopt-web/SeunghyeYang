@@ -1,4 +1,4 @@
-import InputBox from "../../components/InputBox";
+import PasswordInputBox from "../../components/PasswordInput";
 import Button from "../../components/Button";
 
 interface PasswordStepProps {
@@ -16,19 +16,18 @@ const PasswordStep = ({
   onChangeCheckPassword,
   onNext,
 }: PasswordStepProps) => {
-  // 여기 수정하기
   const isDisabled =
     !password.trim() || !checkPassword.trim() || password != checkPassword;
   return (
     <>
-      <InputBox
+      <PasswordInputBox
         label="비밀번호"
         value={password}
         onChange={onChangePassword}
         placeholder="비밀번호를 입력해주세요"
         type="password"
       />
-      <InputBox
+      <PasswordInputBox
         label="비밀번호 확인"
         value={checkPassword}
         onChange={onChangeCheckPassword}

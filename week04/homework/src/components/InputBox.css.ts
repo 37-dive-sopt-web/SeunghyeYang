@@ -16,9 +16,4 @@ export const input = style({
   border: "1px solid #d9d9d9",
   fontSize: "14px",
   outline: "none",
-  selectors: {
-    "&:focus": {
-      borderColor: "#FBE188",
-    },
-  },
 });

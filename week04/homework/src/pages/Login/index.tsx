@@ -5,6 +5,7 @@ import Button from "../../components/Button";
 import * as styles from "./login.css";
 import { useNavigate } from "react-router-dom";
 import { login } from "../../apis/auth";
+import PasswordInputBox from "../../components/PasswordInput";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -46,7 +47,7 @@ const Login = () => {
           placeholder="아이디를 입력해주세요"
         />
         {/* 비밀번호 입력 */}
-        <InputBox
+        <PasswordInputBox
           label="비밀번호"
           type="password"
           value={password}
