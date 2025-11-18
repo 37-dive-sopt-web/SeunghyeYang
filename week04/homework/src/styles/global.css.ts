@@ -3,6 +3,7 @@ import "./reset.css.ts";
 
 globalStyle("*, *::before, *::after", {
   boxSizing: "border-box",
+  overscrollBehavior: "none",
 });
 
 globalStyle("body", {
