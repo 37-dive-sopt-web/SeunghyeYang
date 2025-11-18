@@ -4,9 +4,10 @@ import * as styles from "./Header.css";
 interface HeaderProps {
   name: string;
   activeTab: "info" | "users";
+  onOpenWithdrawModal: () => void;
 }
 
-const Header = ({ name, activeTab }: HeaderProps) => {
+const Header = ({ name, activeTab, onOpenWithdrawModal }: HeaderProps) => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -39,7 +40,7 @@ const Header = ({ name, activeTab }: HeaderProps) => {
         <button type="button" className={styles.tab} onClick={handleLogout}>
           로그아웃
         </button>
-        <button type="button" className={styles.tab}>
+        <button onClick={onOpenWithdrawModal} className={styles.tab}>
           회원탈퇴
         </button>
       </nav>

@@ -54,3 +54,12 @@ export async function updateUser(id: number, req: UpdateUserRequest) {
 
   return res.data;
 }
+
+// 회원 탈퇴
+export async function deleteUser(id: number) {
+  const res = await api.delete(`users/${id}`).json<ApiResponse<null>>();
+
+  if (!res.success) {
+    throw new Error(res.message || "회원탈퇴에 실패했습니다.");
+  }
+}

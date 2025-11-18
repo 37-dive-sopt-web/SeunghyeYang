@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react";
 import type { FormEvent } from "react";
+import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header";
 import InputBox from "../../components/InputBox";
 import Button from "../../components/Button";
+import WithdrawModal from "../../components/WithdrawModal";
 import * as styles from "./mypage.css";
-import { getUser, updateUser } from "../../apis/users";
+import { getUser, updateUser, deleteUser } from "../../apis/users";
 
 const MyPage = () => {
+  const navigate = useNavigate();
+
   const userIdStr = localStorage.getItem("userId");
   const userId = userIdStr ? Number(userIdStr) : null;
 
@@ -15,10 +19,31 @@ const MyPage = () => {
   const [email, setEmail] = useState("");
   const [age, setAge] = useState("");
 
-  //초기값
+  // 초기값
   const [initialName, setInitialName] = useState("");
   const [initialEmail, setInitialEmail] = useState("");
   const [initialAge, setInitialAge] = useState("");
+
+  // 탈퇴 모달
+  const [isWithdrawOpen, setIsWithdrawOpen] = useState(false);
+  const handleOpenWithdraw = () => setIsWithdrawOpen(true);
+  const handleCloseWithdraw = () => setIsWithdrawOpen(false);
+
+  const handleConfirmWithdraw = async () => {
+    if (!userId) return;
+
+    try {
+      await deleteUser(userId);
+
+      alert("회원탈퇴가 완료되었습니다.");
+      localStorage.removeItem("userId");
+      navigate("/");
+    } catch {
+      alert("회원탈퇴에 실패했습니다.");
+    } finally {
+      setIsWithdrawOpen(false);
+    }
+  };
 
   // getUser
   useEffect(() => {
@@ -73,7 +98,11 @@ const MyPage = () => {
 
   return (
     <div className={styles.page}>
-      <Header name={name} activeTab="info" />
+      <Header
+        name={name}
+        activeTab="info"
+        onOpenWithdrawModal={handleOpenWithdraw}
+      />
 
       <main className={styles.main}>
         <form className={styles.form} onSubmit={handleSubmit}>
@@ -110,6 +139,13 @@ const MyPage = () => {
           </Button>
         </form>
       </main>
+
+      {isWithdrawOpen && (
+        <WithdrawModal
+          onCancel={handleCloseWithdraw}
+          onConfirm={handleConfirmWithdraw}
+        />
+      )}
     </div>
   );
 };
