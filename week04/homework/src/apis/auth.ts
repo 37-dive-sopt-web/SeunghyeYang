@@ -5,12 +5,21 @@ export interface LoginRequest {
   password: string;
 }
 
-export interface LoginResponse {
+export interface LoginData {
   userId: number;
   name: string;
 }
 
+interface ApiResponse<T> {
+  success: boolean;
+  code: string;
+  message: string;
+  data: T;
+}
+
 export async function login(req: LoginRequest) {
-  const res = await api.post("auth/login", { json: req }).json<LoginResponse>();
-  return res;
+  const res = await api
+    .post("auth/login", { json: req })
+    .json<ApiResponse<LoginData>>();
+  return res.data;
 }

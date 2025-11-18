@@ -22,10 +22,10 @@ const Login = () => {
     try {
       setError(null);
 
-      const res = await login({ username, password });
+      const data = await login({ username, password });
 
       /*userId 저장 (로컬스토리지 선택)*/
-      localStorage.setItem("userId", String(res.userId));
+      localStorage.setItem("userId", String(data.userId));
 
       navigate("/mypage");
     } catch {
